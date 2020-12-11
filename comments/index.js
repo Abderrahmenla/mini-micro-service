@@ -7,7 +7,6 @@ const {
 } = require('crypto');
 app.use(bodyParser.json());
 const commentsByPostId = {}
-// cors
 
 app.use(cors());
 app.get('/posts/:id/comments', (req, res) => {
