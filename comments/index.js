@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const {
     randomBytes
 } = require('crypto');
-//index.js
+//index
 app.use(bodyParser.json());
 const commentsByPostId = {}
 
