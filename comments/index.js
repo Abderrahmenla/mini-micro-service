@@ -1,20 +1,18 @@
 const express = require('express');
-const app = express();
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const {
     randomBytes
 } = require('crypto');
+const app = express();
 app.use(bodyParser.json());
-const commentsByPostId = {}
-// yolo
- 
+const commentsByPostId = {} 
 app.use(cors());
 app.get('/posts/:id/comments', (req, res) => {
     res.send(commentsByPostId[req.params.id] || []);
 });
 app.post('/posts/:id/comments', (req, res) => {
-    const commentId = randomBytes(7).toString('hex');
+    const commentId = randomBytes(4).toString('hex');
     const {
         content
     } = req.body;
