@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 vonst axios = require('axios');
-const bodyParser = require('body-parser'); // what does bodyparser ? ?
+const bodyParser = require('body-parser'); 
 const { randomBytes } = require('crypto');
 app.use(bodyParser.json());
 const posts = {};
