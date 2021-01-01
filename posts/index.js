@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const { randomBytes } = require('crypto');
 app.use(bodyParser.json());
 const posts = {};
-app.use(cors()); // what does the mehtod use ? ?
+app.use(cors()); 
 app.get('/posts', (req, res) => {
     res.send(posts);
 }); // route handler
