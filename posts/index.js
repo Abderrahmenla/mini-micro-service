@@ -9,7 +9,7 @@ const posts = {};
 app.use(cors()); 
 app.get('/posts', (req, res) => {
     res.send(posts);
-}); // route handler
+}); 
 
 app.post('/posts', async (req, res) => {
     const id = randomBytes(4).toString('hex');
